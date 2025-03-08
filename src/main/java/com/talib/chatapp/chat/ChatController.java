@@ -15,7 +15,7 @@ public class ChatController {
         return chatMessage;
     }
 
-    @MessageMapping("/chat.adduser")
+    @MessageMapping("/chat.addUser")
     @SendTo("/topic/public")
     public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor simpMessageHeaderAccessor) {
         //Add Username to WS Session
